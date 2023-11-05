@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  <script type="module" crossorigin src="/testImgUpload/assets/index-a510234f.js"></script>
-  <link rel="stylesheet" href="/testImgUpload/assets/index-7eb777c6.css">
+  <script type="module" crossorigin src="/testImgUpload/assets/admin-2fc29f20.js"></script>
+  <link rel="stylesheet" href="/testImgUpload/assets/admin-7eb777c6.css">
 </head>
 <body>
     <h1>這是會員頁面</h1>
@@ -20,32 +20,5 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
     
-    <script>
-        let welcome = document.querySelector(".welcome");
-
-        welcome.innerHTML = `歡迎回來 ${localStorage.getItem("userName")}`;
-
-        document.querySelector('.btn').addEventListener('click', function () {
-            var formData = new FormData();
-            formData.append("image", document.querySelector(".myFile").files[0]);
-
-            axios.post("https://api.imgur.com/3/image", formData, {
-                headers: {
-                    "Authorization": "Client-ID 9370a32fefaf63c",
-                    "Content-Type": "multipart/form-data"
-                }
-            })
-                .then(function (response) {
-                    var photo = response.data.data.link;
-                    // var photo_hash = response.data.data.deletehash;
-                    document.querySelector(".pic").src = photo;
-                    console.log(response);
-                })
-                .catch(function (error) {
-                    console.error("發生錯誤", error);
-                });
-        });
-
-    </script>
 </body>
 </html>
