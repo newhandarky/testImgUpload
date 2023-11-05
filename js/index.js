@@ -1,6 +1,3 @@
-import "./admin";
-import "./user";
-
 let adminBtn = document.querySelector(".adminBtn");
 let userBtn = document.querySelector(".userBtn");
 
