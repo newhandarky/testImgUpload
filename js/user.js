@@ -14,7 +14,7 @@ document.querySelector('.btn').addEventListener('click', function () {
     })
         .then(function (response) {
             var photo = response.data.data.link;
-            var photo_hash = response.data.data.deletehash;
+            // var photo_hash = response.data.data.deletehash;
             document.querySelector(".pic").src = photo;
             console.log(response);
         })

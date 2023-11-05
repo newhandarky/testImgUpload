@@ -1,7 +1,9 @@
-const admin = document.querySelector(".admin");
-const user = document.querySelector(".user");
 
-admin.addEventListener("click", function(){
+
+let adminBtn = document.querySelector(".adminBtn");
+let userBtn = document.querySelector(".userBtn");
+
+adminBtn.addEventListener("click", function(){
     axios.post("https://catroomdb.onrender.com/login", {
         "email" : "userTest053@gmail.com", 
         "password" : "userTest053"
@@ -18,7 +20,7 @@ admin.addEventListener("click", function(){
     })
 })
 
-user.addEventListener("click", function(){
+userBtn.addEventListener("click", function(){
     axios.post("https://catroomdb.onrender.com/login", {
         "email" : "userTest001@gmail.com", 
         "password" : "userTest001"
@@ -31,3 +33,31 @@ user.addEventListener("click", function(){
         console.log(err.response);
     })
 })
+
+
+//User
+let welcome = document.querySelector(".welcome");
+
+welcome.innerHTML = `歡迎回來 ${localStorage.getItem("userName")}`;
+
+document.querySelector('.btn').addEventListener('click', function () {
+    var formData = new FormData();
+    formData.append("image", document.querySelector(".myFile").files[0]);
+
+    axios.post("https://api.imgur.com/3/image", formData, {
+        headers: {
+            "Authorization": "Client-ID 9370a32fefaf63c",
+            "Content-Type": "multipart/form-data"
+        }
+    })
+        .then(function (response) {
+            var photo = response.data.data.link;
+            // var photo_hash = response.data.data.deletehash;
+            document.querySelector(".pic").src = photo;
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.error("發生錯誤", error);
+        });
+});
+
