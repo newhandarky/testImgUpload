@@ -9,5 +9,9 @@
     <h1>這是後台</h1>
     <h3 class="welcome"></h3>
     <script type="module" src="../main.js"></script>
+    <script>
+        let welcome = document.querySelector(".welcome");
+        welcome.innerHTML = `歡迎回來 ${localStorage.getItem("userName")}`;
+    </script>
 </body>
 </html>

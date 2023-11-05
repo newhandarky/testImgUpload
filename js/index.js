@@ -11,7 +11,7 @@ adminBtn.addEventListener("click", function(){
         if(res.data.user.role === "admin"){
             localStorage.setItem("userRole", res.data.user.role);
             localStorage.setItem("userName", res.data.user.name);
-            location.href = "admin.html"
+            location.href = "admin.html";
         }
     }).catch(function (err) {
         console.log(err.response);
@@ -31,3 +31,4 @@ userBtn.addEventListener("click", function(){
         console.log(err.response);
     })
 })
+
