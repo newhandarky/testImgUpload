@@ -27,7 +27,7 @@ export default defineConfig({
   // base: '/Repository 的名稱/'
   base: '/testImgUpload/',
   plugins: [
-    liveReload(['./layout/**/*.ejs', './pages/**/*.ejs', './pages/**/*.html', './js/*.js']),
+    liveReload(['./layout/**/*.ejs', './pages/**/*.ejs', './pages/**/*.html', './js/**/*.js']),
     ViteEjsPlugin(),
     moveOutputPlugin(),
   ],
