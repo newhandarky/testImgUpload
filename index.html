@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  <script type="module" crossorigin src="/testImgUpload/assets/index-0348b07e.js"></script>
-  <link rel="stylesheet" href="/testImgUpload/assets/index-7eb777c6.css">
+  <script type="module" crossorigin src="/testImgUpload/assets/user-40df7d11.js"></script>
+  <link rel="stylesheet" href="/testImgUpload/assets/user-7eb777c6.css">
 </head>
 <body>
     
@@ -15,43 +15,9 @@
 
     
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    
+    <script src="../js/index.js"></script>
     
 </body>
-<!-- <script>
-    const admin = document.querySelector(".admin");
-    const user = document.querySelector(".user");
 
-    admin.addEventListener("click", function(){
-        axios.post("https://catroomdb.onrender.com/login", {
-            "email" : "userTest053@gmail.com", 
-            "password" : "userTest053"
-        }).then(function (res) {
-            console.log(res.data);
-            localStorage.setItem("userLoginToken", res.data.accessToken);
-            if(res.data.user.role === "admin"){
-                localStorage.setItem("userRole", res.data.user.role);
-                localStorage.setItem("userName", res.data.user.name);
-                location.href = "admin.html"
-            }
-        }).catch(function (err) {
-            console.log(err.response);
-        })
-    })
-
-    user.addEventListener("click", function(){
-        axios.post("https://catroomdb.onrender.com/login", {
-            "email" : "userTest001@gmail.com", 
-            "password" : "userTest001"
-        }).then(function (res) {
-            console.log(res.data);
-            localStorage.setItem("userLoginToken", res.data.accessToken);
-            localStorage.setItem("userName", res.data.user.name);
-            location.href = "user.html"
-        }).catch(function (err) {
-            console.log(err.response);
-        })
-    })
-</script> -->
 
 </html>
